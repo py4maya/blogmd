@@ -12,7 +12,7 @@ keywords: "xsec 网络安全相关的开发工作.可能涉及必要的扫描，
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: 
 
 # Specify the date when the site was setup
 #since: 2015
@@ -49,9 +49,10 @@ index_with_subtitle: false
 menu:
   home: /
   categories: /categories/
-  about: /about/
   archives: /archives/
   tags: /tags/
+  about: /about/
+  xsafe: /categories/xsafe
   #sitemap: /sitemap.xml
   #commonweal: /404/
 
@@ -71,6 +72,7 @@ menu_icons:
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
+  xsafe: calendar
 
 
 # ---------------------------------------------------------------
@@ -118,16 +120,16 @@ social_icons:
   Weibo: weibo
 
 # Blog rolls
-#links_title: Links
-#links_layout: block
+links_title: 友情链接
+links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+	糖果实验室: http://lua.ren
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: images/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -147,8 +149,8 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right
-  position: left
-  #position: right
+  #position: left
+  position: right
 
   # Sidebar Display, available value:
   #  - post    expand on posts automatically. Default.
@@ -204,9 +206,9 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
-  min2read: false
-  separated_meta: true
+  wordcount: false 
+  min2read: false 
+  separated_meta: false 
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -215,14 +217,14 @@ post_wordcount:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
-#reward_comment: Donate comment here
-#wechatpay: /images/wechatpay.jpg
+reward_comment: 博主很辛苦，求打赏
+wechatpay: /images/wechat_pay.jpg
 #alipay: /images/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
 post_copyright:
-  enable: false
+  enable: true 
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 

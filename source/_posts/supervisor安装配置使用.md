@@ -2,6 +2,7 @@
 title: supervisor安装配置使用
 date: 2017-03-07 08:57:50
 tags: [python,pip,supervisor]
+categories: 系统
 ---
 
 1. 安装supervisor

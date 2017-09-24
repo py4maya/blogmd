@@ -2,6 +2,7 @@
 title: 使用nginx做后端tcp,udp的proxy
 date: 2017-09-23 07:51:16
 tags: [nginx,stream,proxy]
+categories: 系统
 ---
 
 安装参数:

@@ -2,6 +2,7 @@
 title: xcode 使用cocoapods
 date: 2017-09-22 16:01:32
 tags: [xcode,pods,brew]
+categories: 开发
 ---
 
 * 安装cocoapods:

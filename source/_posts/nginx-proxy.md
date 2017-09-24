@@ -1,7 +1,8 @@
 ---
 title: 使用nginx制作全代理
 date: 2017-09-21 20:47:02
-tags: [nginx,linux]
+tags: [nginx,linux,proxy]
+categories: 系统
 ---
 
 * 编译nginx,编译脚本:
