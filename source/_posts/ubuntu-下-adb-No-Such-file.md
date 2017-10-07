@@ -2,7 +2,7 @@
 title: ubuntu 下 adb No Such file
 date: 2017-03-03 14:34:19
 tags: [ubuntu,adb,android]
-
+categories: 系统
 ---
 
 

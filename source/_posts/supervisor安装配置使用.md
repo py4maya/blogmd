@@ -25,6 +25,7 @@ $ echo_supervisord_conf > /etc/supervisord.conf
 [program:mobsf]
 ;process_name = %(program_name)s-%(process_num)d  
 ;numprocs = 5
+;command = python /data0/Mobile-Security-Framework-MobSF/manage.py --port=30%(process_num)02d 根据进程设置端口
 command = python /data0/Mobile-Security-Framework-MobSF/manage.py runserver 0.0.0.0:8000
 user = root
 autostart = true
@@ -32,6 +33,11 @@ autorestart = true
 startsecs = 5
 stderr_logfile = /data0/Mobile-Security-Framework-MobSF/logs/run/error.log
 stdout_logfile = /data0/Mobile-Security-Framework-MobSF/logs/run/stdout.log
+; 标准输入，标准输出配置文件大小
+stdout_logfile_maxbytes = 200MB
+stdout_logfile_backups = 50
+stderr_logfile_maxbytes = 200MB
+stderr_logfile_backups = 10
 ```
 4. 启动命令:
 ```shell

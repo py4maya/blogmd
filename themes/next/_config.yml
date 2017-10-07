@@ -121,8 +121,8 @@ social_icons:
 
 # Blog rolls
 links_title: 友情链接
-links_layout: block
-#links_layout: inline
+#links_layout: block
+links_layout: inline
 links:
 	xsec: https://xsec.io/
 	糖果实验室: http://lua.ren
@@ -253,7 +253,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night bright 
+highlight_theme: normal 
 
 
 # ---------------------------------------------------------------
