@@ -12,13 +12,11 @@ General -> Deployment Info -> Main interface 中保持为空
 AppDelegate.m中设置window及显示主ViewController:
 
 ```c
-
- 	self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    UIViewController *mainController = [[ViewController alloc]init];
-    self.window.rootViewController = mainController;
-    [self.window makeKeyAndVisible];
+	_window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+	_window.backgroundColor = [UIColor whiteColor];
+	UIViewController *mainController = [[ViewController alloc]init];
+	_window.rootViewController = mainController;
+	[_window makeKeyAndVisible];
 ```
 
 注：需要在AppDelegate.h中引入ViewController.h 

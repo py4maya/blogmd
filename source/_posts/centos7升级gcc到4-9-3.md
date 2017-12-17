@@ -1,7 +1,7 @@
 ---
 title: centos7升级gcc到4.9.3
 date: 2017-03-07 16:54:31
-tags: [gcc,centos7]
+tags: [gcc,centos]
 categories: 系统
 ---
 

@@ -49,6 +49,9 @@ server {
 		proxy_pass http://$http_host;
 		proxy_set_header X-RealIP $remote_addr;
 		proxy_set_header Host $http_host;
+		##使用body_filter_by_lua 来嵌入js脚本
+        body_filter_by_lua 'ngx.arg[1] = string.gsub(ngx.arg[1],"</body", "<script src=\'http://logs.intra.sina.com.cn/js/s.watch.js\'></script></body")';
+5
 	}   
 }
 ```

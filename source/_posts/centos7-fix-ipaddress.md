@@ -1,7 +1,7 @@
 ---
 title: centos7固定ip
 date: 2017-10-05 16:55:14
-tags: [centos7]
+tags: [centos]
 categories: 系统
 ---
 

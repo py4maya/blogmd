@@ -76,4 +76,17 @@ df = dframe[ 'B' > 10] #数据筛选
 df.sort_values(ascending=True|False) 
 ```
 
+##### 数据类型转换:
+```python
+
+df['col2'] = df['col2'].astype('int')
+print '-----------'
+print df.dtypes
+
+df['col2'] = df['col2'].astype('float64')
+print '-----------'
+print df.dtypes
+
+```
+
 [数据翻译来源https://kanoki.org/2017/07/16/pandas-in-a-nutshell/#Selecting-Index](https://kanoki.org/2017/07/16/pandas-in-a-nutshell/#Selecting-Index)

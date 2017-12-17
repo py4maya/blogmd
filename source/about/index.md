@@ -12,8 +12,6 @@ date: 2017-09-23 08:27:18
 
 * [qapp](https://github.com/qixingyue/qapp)
 * [ngx_tool](https://github.com/qixingyue/ngx_tool)
-* [xradius](https://github.com/qixingyue/xradius)
-* [lscan](https://github.com/qixingyue/lscan)
 
 ---
 #### 联系我
