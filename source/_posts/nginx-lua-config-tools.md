@@ -107,3 +107,8 @@ end
 set_by_lua $p_pass_addr  "return tools.set_pass_addr()";
 proxy_pass $p_pass_addr;
 ```
+
+* 开发阶段建议把 **lua_cache** 打开:
+```shell
+lua_code_cache 'off';
+```

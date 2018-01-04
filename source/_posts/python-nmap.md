@@ -2,7 +2,7 @@
 title: python nmap 库的简单实用
 date: 2017-11-09 15:06:18
 tags: [python,nmap,fping]
-categories: 安全开发
+categories: 开发
 ---
 
 

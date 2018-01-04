@@ -67,3 +67,35 @@ logfile:close()
 
 ```
 
+* 添加必要的lua模块，请使用如下脚本安装LuaRocks
+```shell
+wget http://luarocks.org/releases/luarocks-2.0.13.tar.gz
+tar -xzvf luarocks-2.0.13.tar.gz
+cd luarocks-2.0.13/
+./configure --prefix=/usr/local/openresty/luajit \
+    --with-lua=/usr/local/openresty/luajit/ \
+    --lua-suffix=jit \
+    --with-lua-include=/usr/local/openresty/luajit/include/luajit-2.1
+make
+sudo make install
+```
+
+* **谨记，谨记** 需要把luarocks 对应的PATH 添加到环境变量中:
+
+```shell
+luarocks path 
+```
+
+* nginx 配置文件加入require的路径标识:
+
+```shell
+lua_package_path '/data1/nginx/lua/?.lua;';
+lua_package_cpath '/usr/local/lib/lua/5.1/?.so;';
+
+###代码中可以使用tools对象,及ngx.shared.server （table对象）
+init_by_lua 'tools = require "tools"';
+lua_shared_dict server 5m;
+
+```
+
+
