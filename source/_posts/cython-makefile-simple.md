@@ -42,35 +42,29 @@ __all__ = [a,b]
 
 * 写入这个Makefile吧:
 ```shell
+
 #### http://www.ruanyifeng.com/blog/2015/02/make.html
 #### make package=<name>
 .PHONY: clean all
-
 sofiles=$(shell ls *.py | grep -v "__init__")
-
 ifndef package
 	package="build"
 endif
-
 all : build
 	mkdir -p $(package)
 	cp __init__.py $(package)
 	cp *.so $(package)
-
 build : $(sofiles:.py=.so)
-
 %.c : %.py
 	cython $<
-
 %.o : %.c
 	$(CC) -c -fPIC $< `python-config --libs` `python-config --includes`
-
 %.so : %.o
 	$(CC) -o $@ $< -fPIC  --shared `python-config --libs`
-
 clean:
 	rm -f *.c *.o *.so
-    rm -rf build
+	rm -rf build
+
 ```
 
 * 然后执行,make package=<name> 就会生成一个<name>的文件夹，把他copy到需要的地方,就可以了用了.
@@ -88,17 +82,16 @@ clean:
 ```shell
 
 .PHONY:all clean
-
-exclude_dirs := Makefile REAMDME.md dist
+exclude_dirs := Makefile README.md dist app.py
 dirs := $(shell ls)
 dirs := $(filter-out $(exclude_dirs),$(dirs))
-
 all:
 	$(foreach N,$(dirs),make -C $(N);)
-
 clean:
+	rm -rf dist 
+	rm app
+	rm app.c
 	$(foreach N,$(dirs),make -C $(N) clean;)
-    rm -rf dist dist: mkdir dist
 
 dist: all
 	mkdir dist
@@ -109,5 +102,7 @@ dist: all
 
 ```
 
-* 执行 make dist . 你将获得一个dist 文件夹. 其中就是你编译好的目标文件.
+* 执行 make dist . 你将获得一个dist 文件夹. 其中就是你编译好的目标文件. dist/app 就是你的可执行文件。
 然后，你就可以开心的把这些so文件拿到其他地方去运行了,至少隐藏了一部分你的源代码，而且，速度上应该比纯python运行快一点儿
+
+* 要是偷懒的的话，可以直接clone 整理好的这个项目: [https://github.com/qixingyue/cython-starter](https://github.com/qixingyue/cython-starter)
