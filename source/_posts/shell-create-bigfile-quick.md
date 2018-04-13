@@ -1,7 +1,7 @@
 ---
 title: 快速创建大文件
 date: 2017-12-06 14:04:59
-tags: [shell]
+tags: [shell,dd]
 categories:
 ---
 

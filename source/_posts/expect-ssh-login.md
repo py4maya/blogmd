@@ -57,3 +57,11 @@ switch $auth {
 
 
 ```
+
+## 必要的时候可能需要用到动态的密码，需要通过一个外部的程序来执行:
+```shell
+set ocode [exec /Users/xingyue/sina/bin/dmcode.sh 1]
+....
+send "$ocode\r"
+
+```

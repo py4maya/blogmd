@@ -26,6 +26,7 @@ export LUAJIT_INC=/data1/luajit/include/luajit-2.0
 --with-stream_ssl_module \
 --with-ld-opt=-Wl,-rpath,/data0/luajit/lib \
 --add-module=../lua-nginx-module
+--add-module=../ngx_devel_kit
 ```
 
 配置正常的nginx模块,添加lua解析:

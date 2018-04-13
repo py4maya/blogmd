@@ -1,7 +1,7 @@
 ---
 title: 从头到尾搭建hexo博客
 date: 2017-03-07 16:54:31
-tags: [hello]
+tags: [hello,npm,hexo,nodejs]
 categories: 系统
 ---
 
