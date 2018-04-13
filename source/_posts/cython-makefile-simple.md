@@ -69,8 +69,45 @@ build : $(sofiles:.py=.so)
 	$(CC) -o $@ $< -fPIC  --shared `python-config --libs`
 
 clean:
-	rm *.c *.o *.so
+	rm -f *.c *.o *.so
+    rm -rf build
 ```
 
 * 然后执行,make package=<name> 就会生成一个<name>的文件夹，把他copy到需要的地方,就可以了用了.
 
+* 多个包的时候可以这样设置目录结构:
+![sapmle picture](/images/cython-project.jpg)
+简单解释如下:
+    app.py 用来放置启动的程序，当然，你为了放置繁琐，可以用python -c "import <package> ; package.app.start()" 来运行，默认情况下,程序执行流程如app.py 执行
+    dist 用来存放编译好的so文件
+    Makefile 项目总的Makefile 一般是一个模板，内容将在下边给出，会遍历子目录里进行make
+    README.md 用来写一些说明吧
+    .... 其他的一些文件夹，就是你写好的python 程序了,注意，每个文件夹里，需要按照以上的结构来设置
+
+* 总的Makefile 内容如下:
+```shell
+
+.PHONY:all clean
+
+exclude_dirs := Makefile REAMDME.md dist
+dirs := $(shell ls)
+dirs := $(filter-out $(exclude_dirs),$(dirs))
+
+all:
+	$(foreach N,$(dirs),make -C $(N);)
+
+clean:
+	$(foreach N,$(dirs),make -C $(N) clean;)
+    rm -rf dist dist: mkdir dist
+
+dist: all
+	mkdir dist
+	cython app.py --embed
+	$(CC) -o app app.c `python-config --libs` `python-config --includes`
+	cp app dist
+	$(foreach N,$(dirs),cp -R $(N)/build dist/$(N);)
+
+```
+
+* 执行 make dist . 你将获得一个dist 文件夹. 其中就是你编译好的目标文件.
+然后，你就可以开心的把这些so文件拿到其他地方去运行了,至少隐藏了一部分你的源代码，而且，速度上应该比纯python运行快一点儿
