@@ -1,7 +1,7 @@
 ---
 title: 使用lua查看http(s)中的请求内容
 date: 2017-10-13 14:05:54
-tags: [nginx,lua,http]
+tags: [nginx,lua,http,LuaRocks]
 categories: [系统]
 ---
 
@@ -99,4 +99,9 @@ lua_shared_dict server 5m;
 
 ```
 
+
+** 注意一点 ** 
+
+配置更新的地址:
+/data0/luajit/share/lua/5.1/luarocks/cfg.lua:198 去掉不通的地址.
 
