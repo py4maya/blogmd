@@ -71,6 +71,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git 
-  #repo: git@github.com:py4maya/py4maya.github.io.git
-  repo: [git@git.coding.net:qixingyue/qixingyue.coding.me.git,git@github.com:py4maya/py4maya.github.io.git]
+  repo: git@github.com:py4maya/py4maya.github.io.git
+  #repo: [git@git.coding.net:qixingyue/qixingyue.coding.me.git,git@github.com:py4maya/py4maya.github.io.git]
   branch: master
