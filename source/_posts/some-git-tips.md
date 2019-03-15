@@ -41,3 +41,15 @@ git push origin --delete master #删除master的远程分支
 git git checkout -b master      #重新生成master 分支
 git push -b origin master       #推送本地master分支到远程 
 ```
+
+* 合并fork源提交到当前master ，用于fork 的项目:
+
+```shell
+
+$ git fetch https://github.com/opensec-cn/kunpeng.git master  ## 或者其他分支的名字
+$ git checkout FETCH_HEAD -b remote # 或者自己定义的名字
+$ git checkout master
+$ git log remote ^master
+$ git cherry-pick commit-id
+$ git push origin master
+```
