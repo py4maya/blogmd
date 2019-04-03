@@ -214,7 +214,7 @@ links_title: Links
 links_layout: block
 #links_layout: inline
 links:
-  #Title: http://example.com
+  medium: https://medium.com/search?q=golang 
 
 # Sidebar Avatar
 avatar:
@@ -340,9 +340,9 @@ codeblock:
   copy_button:
     enable: true 
     # Show text copy result
-    show_result: false
+    show_result: true 
     # Style: only 'flat' is currently available, leave it blank if you prefer default theme
-    style:
+    style: 
 
 # Wechat Subscriber
 wechat_subscriber:
@@ -366,7 +366,7 @@ reward:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: false
+  enable: true 
   title: # custom header, leave empty to use the default one
   display_in_home: false
   params:
@@ -409,7 +409,7 @@ custom_logo:
 # Code Highlight theme
 # Available values: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night bright
+highlight_theme: normal
 
 # Enable "cheers" for archive page.
 cheers: true

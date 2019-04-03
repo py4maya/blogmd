@@ -11,6 +11,7 @@ categories:
 git clone https://github.com/golang/net.git $GOPATH/src/github.com/golang/net
 git clone https://github.com/golang/sys.git $GOPATH/src/github.com/golang/sys
 git clone https://github.com/golang/tools.git $GOPATH/src/github.com/golang/tools
+git clone https://github.com/golang/crypto.git $GOPATH/src/github.com/golang/crypto
 ```
 
 #### 第二步：
