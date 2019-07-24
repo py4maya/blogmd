@@ -215,6 +215,9 @@ links_layout: block
 #links_layout: inline
 links:
   medium: https://medium.com/search?q=golang 
+  coolshell: https://coolshell.cn
+  haoel: https://github.com/haoel 
+  wallpaper: https://wallpaperaccess.com/
 
 # Sidebar Avatar
 avatar:

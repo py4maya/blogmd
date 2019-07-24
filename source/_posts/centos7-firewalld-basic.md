@@ -51,3 +51,5 @@ $ firewall-cmd --reload
 $ firewall-cmd --permanent --remove-rich-rule="rule family="ipv4" source address="192.168.142.166" port protocol="tcp" port="11300" accept"
 $ firewall-cmd --permanent --add-rich-rule="rule family="ipv4" source address="192.168.142.166" port protocol="tcp" port="11300" accept"
 ```
+
+** 最后 谨记一点: 启用firewalld 的时候，一定要保证你的ssh 服务已经添加到了允许范围，不然你得跑一趟机房了**
